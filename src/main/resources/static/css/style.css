@@ -1,0 +1,75 @@
+.header {
+    background-color: #147bd0;
+    color:white;
+    letter-spacing: 1px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.activo a,
+#sidebar a:hover {
+    background: transparent;
+    color:rgb(255, 0, 255);
+}
+
+.menu {
+    background-color: #102742;
+    height: 638px;
+    font-size: 13px;
+}
+
+.titulo {
+    color:yellow;
+    text-decoration: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.alinear_derecha {
+    float: right!important;
+    color:yellow;
+}
+
+.alinear_izquierda {
+    float: left!important;
+    margin-right: 25px;
+    color: #98a8b9;
+}
+
+.main {
+    background: #f1f4f9;
+    height: 638px;
+}
+
+.continentes {
+    color: #98a8b9;
+}
+
+.menu li {
+    margin: 8px;
+}
+.cuerpo {
+    margin: 20px 0 20px 0;
+    font-weight: normal;
+    color:red;
+    font-size: 17px;
+    text-decoration: none;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.valor_1 {
+    color: #337ab7;
+    text-decoration: none;
+}
+.valor_2 {
+    margin-left: 50px;
+    color: black;
+    text-decoration: none;
+}
+
+#sidebar a i{
+    margin-right: 20px;
+}

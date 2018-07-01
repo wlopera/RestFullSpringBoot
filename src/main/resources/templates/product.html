@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="ProductApp">
+<head>
+ <!-- Libreria CCS bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    
+    <!-- Libreria CCS propia del aplicativo -->
+    <link rel="stylesheet" href="../../css/style.css"/>
+    
+    <!-- Libreria Jquery - requerida por boopstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Libreria bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!-- Libreria angularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    
+    <!-- Libreria propia del aplicativo -->
+    <script src="../../js/product_app.js"></script>
+    <script src="../../js/product_service.js"></script>
+    <script src="../../js/product_controller.js"></script>
+    
+    <title>ProductosAPP</title>
+</head>
+<body ng-controller="ProductController as ctrl">
+	<div>
+		<h1>Toneladas de Productos</h1>
+		<hr></hr>
+		
+		<div class="row">
+		  	<div class="col-sm-6">
+		  		<button ng-click="ctrl.growProduct()" class ="btn btn-info">Productos Cultivados</button>
+		  		<button ng-click="ctrl.importProduct()" class ="btn btn-info">Productos Importados</button>
+		  		<button ng-click="ctrl.createProduct()" class ="btn btn-primary">Almacenar Productos Cultivados</button>
+		  	</div>
+		</div>
+		<div class="row" ng-show="ctrl.mostrar">
+		  <div class="col-sm-6">
+		  	<h2>Toneladas {{ctrl.acionProducto}}</h2>
+			<table class="table table-striped">
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Cantidad</th>
+				</tr>
+				<tr ng-repeat="producto in ctrl.productos">
+					<td>{{producto.id}}</td>
+					<td>{{producto.nombre}}</td>
+					<td>{{producto.cantidad}} Ton.</td>
+				</tr>
+				</table>
+		  </div>
+		</div>
+		<div ng-model="ctrl.message">{{ctrl.message}}</div>
+	</div>
+</body>
+</html>
